@@ -9,12 +9,6 @@ void main(){
   );
 }
 
-int getFrases(){
-  var num = Random().nextInt(35);
-  return num;
-}
-
-
 class Home extends StatefulWidget {
 
   const Home({super.key});
@@ -24,8 +18,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  var _frase = "Frase aqui";
-  final _fraseRandom = [
+  var _frase = "Clique para gerar uma Frase.";
+  final _frases = [
     "Acredite na magia de novos começos. Hoje é o seu dia para brilhar!",
     "Nunca subestime o poder de um pequeno passo positivo. Cada um leva você mais perto do seu sonho.",
     "Sua maior limitação é você mesmo. Acredite em suas capacidades e veja o impossível se tornar possível.",
@@ -64,45 +58,61 @@ class _HomeState extends State<Home> {
     "Todo progresso começa com a decisão de tentar. Dê o passo.",
     "Liberte-se das expectativas. Viva de acordo com seus próprios termos."
   ];
+
+  void _getFrase(){
+    var numRandom = Random().nextInt(_frases.length);
+    setState(() {
+      _frase= _frases[numRandom];
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFF176b5b),
-        title: const Text("Frases do dia"),
+        title: const Text("Frases do Dia",
+          style: TextStyle(
+            fontSize: 20,
+            color: Colors.white,
+            fontWeight: FontWeight.w900,
+          ),
+        ),
       ),
       body: Container(
         color: Colors.white,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset("assets/foto.jpg"),
 
-            Padding(padding: EdgeInsets.all(30),
-             child:
-              Text("$_frase",
-                style:
-                  TextStyle(
-                    fontSize: 20,
-                  ),
-              ),
+            Padding(padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+             child: Align(
+               alignment: Alignment.center,
+               child: Text("$_frase",
+                 textAlign: TextAlign.center,
+                 style:
+                 const TextStyle(
+                   fontSize: 25,
+                 ),
+               ),
+             ),
            ),
 
             ElevatedButton(
-                onPressed: (){
-                  setState(() {
-                    var i = getFrases();
-                    _frase = _fraseRandom[i];
-                    print(_frase);
-                  });
-                },
+                onPressed: _getFrase,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green,
                   foregroundColor: Colors.white,
 
                 ),
-                child: Text("Mudar Frase"),
+                child: Text("Nova Frase",
+                  style: TextStyle(
+                    fontSize: 25,
+                  ),
+                ),
             )
           ],
         ),
