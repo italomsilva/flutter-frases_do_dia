@@ -1,6 +1,46 @@
-# frases_do_dia
+# Gerador de Frases do Dia com Flutter ✨
 
-A new Flutter project.
+Este é um aplicativo desenvolvido em Flutter que gera uma frase inspiradora para o dia ao clicar em um botão. O gerenciamento de estado é realizado com o provider.
+
+## Demonstração do Gerador de Frases
+
+![Demonstração do Aplicativo](doc/showApp.gif)
+
+## Funcionalidades
+
+- Gera uma frase inspiradora diferente a cada clique no botão.
+- Interface do usuário simples e intuitiva.
+- +30 frases.
+
+## Tecnologias Utilizadas
+
+- Flutter
+- Dart
+
+## Uso
+
+Para utilizar este aplicativo:
+
+1. Clone este repositório.
+```bash
+git clone https://github.com/seu-usuario/gerador-de-frases-flutter.git
+```
+   
+2. Abra o projeto no seu ambiente de desenvolvimento Flutter.
+```bash
+cd gerador-de-frases-flutter
+flutter pub get
+```
+
+3. Execute o aplicativo em um emulador ou dispositivo físico.
+```bash
+flutter run
+```
+4. Certifique-se de ter o ambiente Flutter configurado corretamente. Para mais informações, consulte a documentação oficial do Flutter.
+   
+5. Licença
+Este projeto está licenciado sob a Licença MIT.
+
 
 ## Getting Started
 
