@@ -1,6 +1,6 @@
 # Gerador de Frases do Dia com Flutter ✨
 
-Este é um aplicativo desenvolvido em Flutter que gera uma frase inspiradora para o dia ao clicar em um botão. O gerenciamento de estado é realizado com o provider.
+Este é um aplicativo desenvolvido em Flutter que gera uma frase inspiradora para o dia ao clicar em um botão. 
 
 ## Demonstração do Gerador de Frases
 
