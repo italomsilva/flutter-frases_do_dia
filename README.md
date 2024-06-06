@@ -28,6 +28,7 @@ git clone https://github.com/italomsilva/frases_do_dia.git
    
 2. Abra o projeto no seu ambiente de desenvolvimento Flutter.
 ```bash
+cd flutter-frases_do_dia
 cd frases_do_dia
 flutter pub get
 ```
