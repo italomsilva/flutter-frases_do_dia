@@ -23,7 +23,7 @@ Para utilizar este aplicativo:
 
 1. Clone este repositório.
 ```bash
-git clone https://github.com/italomsilva/frases_do_dia.git
+git clone https://github.com/italomsilva/flutter-frases_do_dia.git
 ```
    
 2. Abra o projeto no seu ambiente de desenvolvimento Flutter.
